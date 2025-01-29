@@ -31,10 +31,10 @@ Accounting for all these effects is quite important to get a realistic looking g
 ![Zoom on a window made hand blown glass showing a few chords.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Manchon_Vernon.pngManchon_Vernon.jpg)
 *Zoom on a window made hand blown glass showing a few chords. Chords are thin filaments of glass that have different optical properties than the main material. This results in continuous variations of the refractive index field inside the panel.*
 
-![https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Tiffany_ref.jpg]
+![Render of a Tiffany lamp.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Tiffany_ref.jpg)
 *Render of a Tiffany lamp. The lamp glass facets are cut from the panel  `./panels/manchon_2_exagerated_e0.03_full*
 
-![https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Tiffany_ref_zoom_A.jpg]
+![Zoom a glass facet of the Tiffany lamp.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Tiffany_ref_zoom_A.jpg)
 *Zoom on a glass facet showing bubbles and chords (pathtracing rendered using mitsuba3_old_glass renderer)*
 
 # DEPENDENCIES:
