@@ -14,6 +14,12 @@ Given the panel shape and surface, the script modifies the provided heightmaps t
 
 Accounting for all these effects is quite important to get a realistic looking glass and can be easily observed on real hand blown glass panels.
 
+![Zoom on a window made hand blown glass showing a few bubbles.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Cordes_caustique.jpg)
+*Zoom on a window made hand blown glass showing a few bubbles.*
+
+![Zoom on a window made hand blown glass showing a few chords.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Manchon_Vernon.pngManchon_Vernon.jpg)
+*Zoom on a window made hand blown glass showing a few chords. Chords are thin filaments of glass that have a different optical properties than the main vitreous matrix. This results in continuous variations of the refractive index field of the material.*
+
 # Usage
 You can check the  `generate_panels.py` script for a few usage examples.
 These panels where used in most of the scenes in the thesis manuscript.
