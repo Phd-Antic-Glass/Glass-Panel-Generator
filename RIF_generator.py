@@ -125,6 +125,7 @@ def simulate_trajectory(seed, radius_i, e):
     ##  Explicit euler method:
     # quick and dirty ... 
     for i in range(2, N):
+        print(" RIF generator (filament trajectory): ", ((i+1)/N)*100, "%", end="\r")
         ## get current and the two previous points
         # radial
         R_kp2 = R[i+0]
@@ -216,7 +217,9 @@ def generate_RIF(grid_shape,sdf_bake_dimension, eta_base, delta_eta, seed, e, ch
 
     # mc estimation
     i = UInt32(0)
-    spvoxel = UInt32(10000)
+    # you may need more monte carlo samples to remove noise (typical value for noise free: 10000)
+    spvoxel = UInt32(100)
+    print("RIF generator (filament density estimation): ", spvoxel, "samples per voxels requiered")
     loop = Loop("MC occupancy", lambda: (i, SDF, RIF,rngXYZ))
     while loop(i < spvoxel):
         SDF_ = filament_sdf_from_trajectory(grid_shape, e, P_/(2*np.pi),Z_,R_, radius, MonteCarlo=True, next_x=rngXYZ.next_float32(),next_y=rngXYZ.next_float32(), next_z=rngXYZ.next_float32(), radius_i=radius_i)

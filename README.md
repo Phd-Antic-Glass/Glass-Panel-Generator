@@ -4,7 +4,7 @@ Utility program for generating hand blown glass panels (bubbles and chords).
 
 This project can generate a complete old glass panel model from two provided heighmaps.
 The full model is composed of elevation data, bubble distribution and refractive index field:
-- The surface elevation profile of the front and back face of the glass panel are defined by 2 floating point greyscale images (`.exr` files) and should be provided by the user. A few examples are provided in  the `./heighmaps/` folder, but you can create your own using whatever procedural noise or elevation data you like.
+- The surface elevation profile of the front and back face of the glass panel are defined by 2 floating point greyscale images (`.exr` files) and should be provided by the user. A few examples are provided in  the `./heighmaps/` folder, but you can create your own using whatever procedural noise or elevation data you like (or see `crown_heighfield_generator.py` for a simple crown glass generator).
 - The discrete bubble distribution is represented by a voxel grid. Each voxel contains (at most) one bubble, and one bubble can overlap multiple cells. The voxel grid is then encoded in a `.bubble` file where each voxel contains a tuple `(pos.x, pos.y, pos.z, radius)` representing the coordinates (in panel space) and the radius of the bubble contained inside the voxel.
 - The continuous Refractive Index Field (RIF) is represented by an another voxel grid encoded in a `.vol` file (see [mitsuba documentation](https://mitsuba.readthedocs.io/en/latest/src/generated/plugins_volumes.html#volume-gridvolume) for more details).
 
@@ -18,10 +18,10 @@ Accounting for all these effects is quite important to get a realistic looking g
 *Zoom on a window made hand blown glass showing a few bubbles.*
 
 ![Zoom on a window made hand blown glass showing a few chords.](https://github.com/Phd-Antic-Glass/Glass-Panel-Generator/blob/main/images/Manchon_Vernon.pngManchon_Vernon.jpg)
-*Zoom on a window made hand blown glass showing a few chords. Chords are thin filaments of glass that have a different optical properties than the main vitreous matrix. This results in continuous variations of the refractive index field of the material.*
+*Zoom on a window made hand blown glass showing a few chords. Chords are thin filaments of glass that have different optical properties than the main material. This results in continuous variations of the refractive index field inside the panel.*
 
 # Usage
-You can check the  `generate_panels.py` script for a few usage examples.
+You can check the `generate_panels.py` script for a few usage examples.
 These panels where used in most of the scenes in the thesis manuscript.
 
 

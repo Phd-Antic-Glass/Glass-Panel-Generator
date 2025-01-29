@@ -47,38 +47,34 @@ def caustic_vitrail():
     heightmap_front="heightmaps/manchon_1_1024.exr"
     heightmap_back="heightmaps/manchon_2_1024.exr"
 
-    H1 = 0.001
-    H2 = 0.001
-    RIF_shape=(1024,1024,2)
-    bubble_shape = (64,64,1)
-    chord_throughtput= 0.0008
-    chord_protuberance=0.0002
-
-
-    ### manchon_2_e0.03_surfaceOnly
-    #  generate_panel(outfolder, "manchon_2_e0.03_surfaceOnly", seed=2, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.001, 0.002), bubble_density=0.25, RIF_shape=RIF_shape, chord_throughtput=chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.0005, gathering_zone=0.3, restore_RIF_from_file=False, debug=False, no_bubbles=True, no_chords=True, no_surface=False)
-
-    ### manchon_2_e0.03_surface_bubbles
-    #  generate_panel(outfolder, "manchon_2_e0.03_surface_bubbles", seed=2, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.001, 0.002), bubble_density=0.25, RIF_shape=RIF_shape, chord_throughtput= chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.0005, gathering_zone=0.3, restore_RIF_from_file=False, debug=False, no_bubbles=False, no_chords=True, no_surface=False)
-
-    ### manchon_2_e0.03_full
-    #  generate_panel(outfolder, "manchon_2_e0.03_full", seed=2, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.001, 0.002), bubble_density=0.25, RIF_shape=RIF_shape, chord_throughtput=chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.0005, gathering_zone=0.3, restore_RIF_from_file=False, debug=False)
-
-
-    ### exagerated
+    ### You can tweak these parameters to taste 
+    # max value for front and back elevation profile 
     H1 = 0.001 
     H2 = 0.001 
+
+    # panel thickness
     e=0.03
+
+    # RIF voxel grid dimension
     RIF_shape=(1024,1024,2)
-    print(RIF_shape)
+
+    # bubble voxel grid dimension
     bubble_shape = (64,64,1)
+
+    # amount of material composing the chord filament
     chord_throughtput= 0.001
+    # strenght of the crosstalk effect
     chord_protuberance=0.0001
+
+    # seed for RIF and bubble distrib. generation
     seed=2
 
-    ## manchon_2_e0.03_surfaceOnly
+    # Surface elevation only
+
     #  generate_panel(outfolder, "manchon_2_exagerated_e0.03_surfaceOnly", seed=seed, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.002, 0.005), bubble_density=0.85, RIF_shape=RIF_shape, chord_throughtput=chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.05, gathering_zone=0.3, restore_RIF_from_file=False, debug=False, no_bubbles=True, no_chords=True, no_surface=False)
-    ## manchon_2_e0.03_surface_bubbles
+
+    # Surface and bubbles only
+
     #  generate_panel(outfolder, "manchon_2_exagerated_e0.03_surface_bubbles", seed=seed, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.002, 0.005), bubble_density=0.85, RIF_shape=RIF_shape, chord_throughtput= chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.05, gathering_zone=0.3, restore_RIF_from_file=False, debug=False, no_bubbles=False, no_chords=True, no_surface=False)
 
     ## manchon_2_e0.03_full
@@ -88,10 +84,10 @@ def caustic_vitrail():
     RIF_shape=(256,256,2)
     generate_panel(outfolder, "manchon_2_exagerated_e0.03_full_lowres", seed=seed, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.002, 0.005), bubble_density=0.85, RIF_shape=RIF_shape, chord_throughtput=chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.1, gathering_zone=0.3, restore_RIF_from_file=False, debug=False)
 
-
 #  various()
 #  PontNotreDame()
 #  stained_glass()
+
 caustic_vitrail()
 
 

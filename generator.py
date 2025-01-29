@@ -37,6 +37,8 @@ import cv2
 from os import environ
 environ["OPENCV_IO_ENABLE_OPENEXR"] = "true"
 
+from pathlib import Path
+
 ## PARAMETERS:
 # e: panel width
 # heightmap_front and heightmap_back : path to front and back heightmaps
@@ -61,6 +63,9 @@ def generate_panel(outfolder, panel_name, seed, e, heightmap_front, heightmap_ba
     ## SURFACE PARAMETERS
     heightmap_front = cv2.imread(heightmap_front, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH)
     heightmap_back = cv2.imread(heightmap_back, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH)
+
+    # create folder for outputs and temp files
+    Path(outfolder+panel_name).mkdir(parents=True, exist_ok=True)
 
     ###########################
     #  SURFACE PREPROCESSING  #
