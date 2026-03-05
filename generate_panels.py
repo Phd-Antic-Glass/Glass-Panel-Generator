@@ -85,10 +85,10 @@ def caustic_vitrail():
     generate_panel(outfolder, "manchon_2_exagerated_e0.03_full_lowres", seed=seed, e=0.03, heightmap_front=heightmap_front,heightmap_back=heightmap_back, H1=H1, H2=H2, bubble_shape=bubble_shape, radius_range=(0.002, 0.005), bubble_density=0.85, RIF_shape=RIF_shape, chord_throughtput=chord_throughtput, chord_protuberance=chord_protuberance, eta_base=1.54, delta_eta=0.1, gathering_zone=0.3, restore_RIF_from_file=False, debug=False)
 
 #  various()
-#  PontNotreDame()
+PontNotreDame()
 #  stained_glass()
 
-caustic_vitrail()
+#  caustic_vitrail()
 
 
 

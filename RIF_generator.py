@@ -218,7 +218,7 @@ def generate_RIF(grid_shape,sdf_bake_dimension, eta_base, delta_eta, seed, e, ch
     # mc estimation
     i = UInt32(0)
     # you may need more monte carlo samples to remove noise (typical value for noise free: 10000)
-    spvoxel = UInt32(100)
+    spvoxel = UInt32(10000)
     print("RIF generator (filament density estimation): ", spvoxel, "samples per voxels requiered")
     loop = Loop("MC occupancy", lambda: (i, SDF, RIF,rngXYZ))
     while loop(i < spvoxel):
